@@ -1,17 +1,13 @@
 module Stack where
 
-data Stack a = EmptyStack | Item a (Stack a) deriving (Eq, Show)
+data Stack a = Empty | Item
+
+empty :: Stack a
+empty = Empty
 
 isEmpty :: Stack a -> Bool
-isEmpty EmptyStack = True
+isEmpty Empty = True
 isEmpty _ = False
 
 push :: a -> Stack a -> Stack a
-push item mySpecialStack = Item item mySpecialStack
-
-top :: Stack a -> a
-top (Item a restOfStack) = a
-
-pop :: Stack a -> Stack a
-pop EmptyStack = EmptyStack
-pop (Item item restOfStack) = restOfStack
+push item mySpecialStack = Item
