@@ -7,10 +7,10 @@ isEmpty EmptyStack = True
 isEmpty _ = False
 
 push :: a -> Stack a -> Stack a
-push item mySpecialStack = Item item mySpecialStack
+push = Item
 
 top :: Stack a -> a
-top (Item a restOfStack) = a
+top (Item item restOfStack) = item
 
 pop :: Stack a -> Stack a
 pop EmptyStack = EmptyStack
