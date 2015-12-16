@@ -4,12 +4,12 @@ import Stack
 import Test.Hspec
 
 spec :: Spec
-spec = do
+spec =
   describe "isEmpty" $ do
-    context "when nothing has been pushed onto the stack" $ do
-      it "is empty" $ do
+    context "when nothing has been pushed onto the stack" $
+      it "is empty" $
         isEmpty empty `shouldBe` True
 
-    context "when the stack has at least one item" $ do
-      it "returns false" $ do
+    context "when the stack has at least one item" $
+      it "returns false" $
         isEmpty (push 1 empty) `shouldBe` False
