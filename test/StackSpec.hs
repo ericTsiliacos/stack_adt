@@ -7,7 +7,7 @@ spec :: Spec
 spec =
   describe "isEmpty" $ do
     context "when nothing has been pushed onto the stack" $
-      it "is empty" $
+      it "returns true" $
         isEmpty empty `shouldBe` True
 
     context "when the stack has at least one item" $
